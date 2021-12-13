@@ -10,7 +10,10 @@
 		}
 	],
 	"settings": {
-		"typescript.tsc.autoDetect": "off"
+		"typescript.tsc.autoDetect": "off",
+		"editor.defaultFormatter": "ms-vscode.cpptools",
+		"editor.formatOnSave": true,
+		"prettier.bracketSpacing": false
 	},
 	"extensions": {
 		"recommendations": [

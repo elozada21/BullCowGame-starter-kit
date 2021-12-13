@@ -15,9 +15,10 @@ public:
 	virtual void BeginPlay() override;
 	virtual void OnInput(const FString &Input) override;
 	void InitGame();
-	void EndGame(bool won);
+	void EndGame(bool WonGame);
 	void ProcessGuess(const FString &Guess);
-	bool IsIsogram(const FString) const;
+	static bool IsIsogram(const FString &Word);
+	void GetBullCows(const FString &Guess) const;
 
 	// Your declarations go below!
 private:
@@ -27,9 +28,9 @@ private:
 	int32 RandomNum;
 	bool bGameOver;
 	TArray<FString> SecretWords;
-	TArray<FString> ValidWords;
+	TArray<FString> Isograms;
 
 	void ReduceNumLives();
 	int32 GetNumLives();
-	void GetValidWords(TArray<FString>);
+	// void GetValidWords(const TArray<FString> &WordList);
 };
